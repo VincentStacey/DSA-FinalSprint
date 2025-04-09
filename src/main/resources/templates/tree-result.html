@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tree Result</title>
+</head>
+<body>
+<h2>Tree Result</h2>
+
+<p><strong>Input Numbers:</strong> <span th:text="${inputNumbers}"></span></p>
+
+<h3>Tree JSON:</h3>
+<pre th:text="${treeJson}"></pre>
+
+<a href="/enter-numbers">Back</a> |
+<a href="/previous-trees">View Previous Trees</a>
+</body>
+</html>

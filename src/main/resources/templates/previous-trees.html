@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Previous Trees</title>
+</head>
+<body>
+
+<h2>Previous Trees</h2>
+
+<div th:if="${records.size() == 0}">
+    <p>No trees found in history.</p>
+</div>
+
+<ul>
+    <li th:each="record : ${records}">
+        <p><strong>Input:</strong> <span th:text="${record.inputNumbers}"></span></p>
+        <p><strong>Tree:</strong></p>
+        <pre th:text="${record.treeJson}"></pre>
+        <hr/>
+    </li>
+</ul>
+
+<form th:action="@{/enter-numbers}" method="get">
+    <button type="submit">Back to Input</button>
+</form>
+
+</body>
+</html>
