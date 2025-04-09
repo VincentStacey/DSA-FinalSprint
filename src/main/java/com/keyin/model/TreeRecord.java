@@ -11,10 +11,10 @@ public class TreeRecord {
     private Long id;
 
     @Lob
-    private String inputNumbers; // e.g., "5,2,7,1,3"
+    private String inputNumbers;
 
     @Lob
-    private String treeJson; // e.g., the JSON-serialized BST
+    private String treeJson;
 
     private LocalDateTime createdAt;
 

@@ -16,7 +16,7 @@ public class TreeController {
 
     @GetMapping("/enter-numbers")
     public String showForm() {
-        return "enter-numbers"; // loads enter-numbers.html
+        return "enter-numbers";
     }
 
     @PostMapping("/process-numbers")
@@ -25,7 +25,7 @@ public class TreeController {
             TreeRecord record = service.processInput(numbers);
             model.addAttribute("treeJson", record.getTreeJson());
             model.addAttribute("inputNumbers", record.getInputNumbers());
-            return "tree-result"; // 👉 show tree result here
+            return "tree-result";
         } catch (Exception e) {
             model.addAttribute("error", "Invalid input.");
             return "enter-numbers";
